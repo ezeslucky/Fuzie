@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+   image: postgres:15.1
+   restart: always
+   enviranment:
+     POSTGRES_USER: fuzie
+     POSTGRES_PASSWORD: fuzie123
+     POSTGRES_DB: fuzie_devlopment
+   volumes:
+    -postgres:/var/lib/postgresql/data
+   ports:
+    - '5432:5432'   
+
+volumes:
+ postgres:
